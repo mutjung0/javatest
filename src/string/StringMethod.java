@@ -1,5 +1,7 @@
 package string;
 
+import java.util.Arrays;
+
 public class StringMethod {
 
     public static void main(String[] args) {
@@ -39,6 +41,16 @@ public class StringMethod {
         String myStr = "Hello";
         char[] myArray = myStr.toCharArray();
         System.out.println(myArray);
+
+        // getBytes
+        String a = "a";
+        System.out.println(a.getBytes()); // [B@4eec7777 byte[]
+        System.out.println(Arrays.toString(a.getBytes())); //[97]
+        System.out.println(a.getBytes().length); // 1
+
+        String b = "가";
+        System.out.println(Arrays.toString(b.getBytes())); // [-22, -80, -128]
+        System.out.println(b.getBytes().length); // 3
 
 
         // https://www.w3schools.com/java/java_ref_string.asp
